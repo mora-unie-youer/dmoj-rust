@@ -74,12 +74,6 @@ fn find_winner(
     foe_health: usize,
     foe_damage: usize,
 ) -> (bool, usize) {
-    if foe_health <= hector_damage {
-        return (true, 1);
-    } else if hector_health <= foe_damage {
-        return (false, 1);
-    }
-
     let foe_max_turns = (foe_health + hector_damage - 1) / hector_damage;
     let hector_max_turns_without_buckler = (hector_health + foe_damage - 1) / foe_damage;
     let buckler_activations = (hector_max_turns_without_buckler - 1) / 3;
