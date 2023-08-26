@@ -50,7 +50,7 @@ fn main() {
     let verb = lines.next().unwrap().unwrap();
     let object = lines.next().unwrap().unwrap();
 
-    let article = match object.chars().rev().next() {
+    let article = match object.chars().next_back() {
         Some('e') => "la",
         Some('s') => "les",
         Some(_) => "le",

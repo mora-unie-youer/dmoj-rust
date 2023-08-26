@@ -7,10 +7,10 @@ pkgs.devShell.mkShell {
     binutils
     gcc
 
-    # Rust 1.70.0 toolchain as DM::OJ supports only this version
+    # Rust 1.71.1 toolchain as DM::OJ supports only this version
     bacon
     cargo-flamegraph
-    (rust-bin.stable."1.70.0".default.override {
+    (rust-bin.stable."1.71.1".default.override {
       # Extensions which ease your development process
       extensions = [ "rust-analyzer" "rust-src" ];
     })
